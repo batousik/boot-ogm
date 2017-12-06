@@ -2,9 +2,11 @@ package com.example.bootogm;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.transaction.Transactional;
 
 import org.springframework.stereotype.Service;
 
+@Transactional
 @Service
 public class PersonDao {
 	@PersistenceContext EntityManager em;

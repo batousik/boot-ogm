@@ -24,7 +24,7 @@ public class BootOgmApplication {
 		bean.setPersistenceUnitName("mongodb-local");
 		return bean;
 	}
-//
+
 //	@Bean
 //	TransactionTemplate transactionTemplate(){
 //		TransactionTemplate transactionTemplate = new TransactionTemplate();
