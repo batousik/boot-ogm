@@ -8,11 +8,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class MyRestController {
 
-	@Autowired PersonDao personDao;
+	@Autowired PersonRepository personRepository;
 
 	@RequestMapping("/person")
 	public String person(@RequestParam(value = "name", defaultValue = "World") String name) {
-		personDao.createPerson( name );
+		personRepository.save( new Person( name ) );
 		return "person";
 	}
 }
